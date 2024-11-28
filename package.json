@@ -1,0 +1,12 @@
+{
+      "name": "slot-machine",
+      "version": "1.0.0",
+      "description": "A simple slot machine game",
+      "main": "index.html",
+      "scripts": {
+            "dev": "vite"
+      },
+      "devDependencies": {
+            "vite": "^4.5.5"
+      }
+}

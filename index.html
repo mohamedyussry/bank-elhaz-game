@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <base href="https://www.menogames.com/%D9%84%D8%B9%D8%A8%D8%A9-%D8%A8%D9%86%D9%83-%D8%A7%D9%84%D8%AD%D8%B8/">
+      <link rel="stylesheet" href="styles.css">
+      <title>بنك الحظ</title>
+    </head>
+    <body>
+      <div class="game-container">
+        <h1>🎰 بنك الحظ 🎰</h1>
+        
+        <div class="stats">
+          <div class="display-box">الرصيد: <span id="balance">1000</span> 💰</div>
+          <div class="display-box">الرهان: <span id="currentBet">10</span> 💵</div>
+        </div>
+
+        <div class="slot-machine">
+          <div class="numbers" id="numbersDisplay">
+            <div class="number">0</div>
+            <div class="number">0</div>
+            <div class="number">0</div>
+          </div>
+
+          <div class="message" id="message"></div>
+
+          <div class="controls">
+            <div class="bet-controls">
+              <button class="bet-button" onclick="changeBet(-10)">-10</button>
+              <button class="bet-button" onclick="changeBet(10)">+10</button>
+            </div>
+            <button id="spinButton" onclick="spin()">اسحب! 🎲</button>
+          </div>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+    </body>
+    </html>

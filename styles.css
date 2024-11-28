@@ -1,0 +1,126 @@
+body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1d0061, #170029);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      min-height: 100vh;
+      direction: rtl;
+    }
+
+    .game-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+      font-size: 24px;
+    }
+
+    .display-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid gold;
+    }
+
+    .slot-machine {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px auto;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+    }
+
+    .numbers {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .number {
+      background: linear-gradient(45deg, #000, #1a1a1a);
+      width: 80px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      border-radius: 15px;
+      border: 3px solid gold;
+      color: #ffd700;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .bet-controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: linear-gradient(45deg, #ffd700, #ff9500);
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #000;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .bet-button {
+      background: linear-gradient(45deg, #4a90e2, #3570e2);
+      color: white;
+    }
+
+    .message {
+      font-size: 24px;
+      color: #ffd700;
+      margin: 20px 0;
+      min-height: 30px;
+    }
+
+    @keyframes spin {
+      0% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.1) rotate(180deg); }
+      100% { transform: scale(1) rotate(360deg); }
+    }
+
+    .spinning .number {
+      animation: spin 0.5s ease-in-out infinite;
+    }
+
+    .win-animation {
+      animation: winPulse 1s ease-in-out infinite;
+    }
+
+    @keyframes winPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
